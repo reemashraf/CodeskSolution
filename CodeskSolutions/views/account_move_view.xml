@@ -9,6 +9,9 @@
                     <field name="bonus_quantity" optional="show"/>
                     <field name="bonus_line" invisible="1"/>
                 </xpath>
+<!--                    <xpath expr="// field [@ name = 'invoice_line_ids']" position="attributes">-->
+<!--	                    <attribute name="attrs">{'invisible': [('bonus_line','=',True)]}</attribute>-->
+<!--                    </xpath>-->
                 </field>
         </record>
     </data>

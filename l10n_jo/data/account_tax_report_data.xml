@@ -13,8 +13,8 @@
     </record>
 
     <record id="tax_report_vat_return_sale_tax_zero" model="account.tax.report.line">
-        <field name="name">1. Zero Rated (Tax)</field>
-        <field name="tag_name">1. Zero Rated (Tax)</field>
+        <field name="name">Zero Rated (Tax)</field>
+        <field name="tag_name">Zero Rated (Tax)</field>
         <field name="code">ZERO_SALE_T</field>
         <field name="report_id" ref="tax_report_jord"/>
         <field name="sequence" eval="1"/>
@@ -23,8 +23,8 @@
 
 
     <record id="tax_report_vat_return_expense_base_zero" model="account.tax.report.line">
-        <field name="name">2. Zero Rated (Base)</field>
-        <field name="tag_name">2. Zero Rated (Base)</field>
+        <field name="name">Zero Rated (Base)</field>
+        <field name="tag_name">Zero Rated (Base)</field>
         <field name="code">ZERO_PUR_B</field>
         <field name="report_id" ref="tax_report_jord"/>
         <field name="sequence" eval="1"/>
@@ -32,8 +32,8 @@
 
 
     <record id="tax_report_vat_return_expense_tax_zero" model="account.tax.report.line">
-        <field name="name">2. Zero Rated (Tax)</field>
-        <field name="tag_name">2. Zero Rated (Tax)</field>
+        <field name="name">Zero Rated (Tax)</field>
+        <field name="tag_name">Zero Rated (Tax)</field>
         <field name="code">ZERO_PUR_T</field>
         <field name="report_id" ref="tax_report_jord"/>
         <field name="sequence" eval="1"/>
