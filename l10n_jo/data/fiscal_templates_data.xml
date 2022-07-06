@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <record id="account_fiscal_position_jordan" model="account.fiscal.position.template">-->
+<!--            <field name="name">Jordan</field>-->
+<!--            <field name="auto_apply" eval="True"/>-->
+<!--            <field name="country_id" ref="base.jo"/>-->
+<!--            <field name="chart_template_id" ref="jordanian_chart_template"/>-->
+<!--        </record>-->
+
+        <record id="account_fiscal_position_exempt_2" model="account.fiscal.position.template">
+            <field name="name">Exempt 2%</field>
+            <field name="auto_apply" eval="True"/>
+            <field name="country_id" ref="base.jo"/>
+            <field name="chart_template_id" ref="jordanian_chart_template"/>
+        </record>
+
+        <record id="account_fiscal_position_exempt_4" model="account.fiscal.position.template">
+            <field name="name">Exempt 4%</field>
+            <field name="auto_apply" eval="True"/>
+            <field name="country_id" ref="base.jo"/>
+            <field name="chart_template_id" ref="jordanian_chart_template"/>
+        </record>
+
+        <record id="account_fiscal_position_exempt_05" model="account.fiscal.position.template">
+            <field name="name">Exempt 5%</field>
+            <field name="auto_apply" eval="True"/>
+            <field name="country_id" ref="base.jo"/>
+            <field name="chart_template_id" ref="jordanian_chart_template"/>
+        </record>
+
+        <record id="account_fiscal_position_exempt_10" model="account.fiscal.position.template">
+            <field name="name">Exempt 10%</field>
+            <field name="auto_apply" eval="True"/>
+            <field name="country_id" ref="base.jo"/>
+            <field name="chart_template_id" ref="jordanian_chart_template"/>
+        </record>
+
+        <record id="account_fiscal_position_exempt_11" model="account.fiscal.position.template">
+            <field name="name">Exempt 11%</field>
+            <field name="auto_apply" eval="True"/>
+            <field name="country_id" ref="base.jo"/>
+            <field name="chart_template_id" ref="jordanian_chart_template"/>
+        </record>
+
+        <record id="account_fiscal_position_exempt_16" model="account.fiscal.position.template">
+            <field name="name">Exempt 16%</field>
+            <field name="auto_apply" eval="True"/>
+            <field name="country_id" ref="base.jo"/>
+            <field name="chart_template_id" ref="jordanian_chart_template"/>
+        </record>
+
+
+    </data>
+</odoo>

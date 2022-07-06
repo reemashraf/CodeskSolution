@@ -1,0 +1,101 @@
+id,code,chart_template_id/id,name,user_type_id,reconcile
+jo_account_111001,111001,l10n_jo.jordanian_chart_template,Estblishment Costs,Fixed Assets,0
+jo_account_112001,112001,l10n_jo.jordanian_chart_template,Furnitures and Equipments,Fixed Assets,0
+jo_account_113001,113001,l10n_jo.jordanian_chart_template,Computers Devices  &Softwares,Fixed Assets,0
+jo_account_114001,114001,l10n_jo.jordanian_chart_template,Accumulated Depreciation  ,Fixed Assets,0
+jo_account_114002,114002,l10n_jo.jordanian_chart_template,Accum Furnitures and Equipments,Fixed Assets,0
+jo_account_114003,114003,l10n_jo.jordanian_chart_template,Accum Computers Devices  &Softwares,Fixed Assets,0
+jo_account_114004,114004,l10n_jo.jordanian_chart_template,Accum Accumulated Depreciation  ,Fixed Assets,0
+jo_account_114005,114005,l10n_jo.jordanian_chart_template,Accum Cars & Vehicals,Fixed Assets,0
+jo_account_114006,114006,l10n_jo.jordanian_chart_template,Accum Decorations &interiors,Fixed Assets,0
+jo_account_114008,114008,l10n_jo.jordanian_chart_template,Accum Estblishment Costs,Fixed Assets,0
+jo_account_115001,115001,l10n_jo.jordanian_chart_template,Cars & Vehicals,Fixed Assets,0
+jo_account_115002,115002,l10n_jo.jordanian_chart_template,Patents,Fixed Assets,0
+jo_account_115003,115003,l10n_jo.jordanian_chart_template,Trademarks,Fixed Assets,0
+jo_account_115004,115004,l10n_jo.jordanian_chart_template,Software and System,Fixed Assets,0
+jo_account_116001,116001,l10n_jo.jordanian_chart_template,Decorations &interiors,Fixed Assets,0
+jo_account_117001,117001,l10n_jo.jordanian_chart_template,Deferred Income Tax ,Fixed Assets,0
+jo_account_121101,121101,l10n_jo.jordanian_chart_template,Cash in hand office,Bank and Cash,0
+jo_account_121102,121102,l10n_jo.jordanian_chart_template,Pettycash ,Bank and Cash,0
+jo_account_121103,121103,l10n_jo.jordanian_chart_template,Current Cash in Hand ,Bank and Cash,0
+jo_account_121104,121104,l10n_jo.jordanian_chart_template,Cashvan Cash,Bank and Cash,0
+jo_account_121105,121105,l10n_jo.jordanian_chart_template,Owner Cash,Bank and Cash,0
+jo_account_121106,121106,l10n_jo.jordanian_chart_template,Delivery Cash,Bank and Cash,0
+jo_account_121201,121201,l10n_jo.jordanian_chart_template,Jordan Kuwait Bank,Bank and Cash,0
+jo_account_121301,121301,l10n_jo.jordanian_chart_template,PayPal,Credit Card,0
+jo_account_121302,121302,l10n_jo.jordanian_chart_template,Visa Card,Credit Card,0
+jo_account_121303,121303,l10n_jo.jordanian_chart_template,Master Card,Credit Card,0
+jo_account_122001,122001,l10n_jo.jordanian_chart_template,(INV) RAW Materials,Current Assets,0
+jo_account_122002,122002,l10n_jo.jordanian_chart_template,inventory account,Current Assets,0
+jo_account_123001,123001,l10n_jo.jordanian_chart_template,Receivables Accounts,Receivable,1
+jo_account_123002,123002,l10n_jo.jordanian_chart_template,Employees Imprest,Receivable,1
+jo_account_123003,123003,l10n_jo.jordanian_chart_template,Branches Company,Receivable,1
+jo_account_123004,123004,l10n_jo.jordanian_chart_template,Reimbursable Income taxes,Current Assets,1
+jo_account_123005,123005,l10n_jo.jordanian_chart_template,Reimbursable outcome taxes,Current Assets,1
+jo_account_123006,123006,l10n_jo.jordanian_chart_template,Accounts Payable with Debit Balances,Receivable,1
+jo_account_123007,123007,l10n_jo.jordanian_chart_template,Other Receivables,Receivable,1
+jo_account_124001,124001,l10n_jo.jordanian_chart_template,Prepaid Rents,Current Assets,0
+jo_account_124002,124002,l10n_jo.jordanian_chart_template,Prepaid Wages,Current Assets,0
+jo_account_125001,125001,l10n_jo.jordanian_chart_template,Profit on others,Receivable,1
+jo_account_211001,211001,l10n_jo.jordanian_chart_template,Companies Paybles,Payable,1
+jo_account_211002,211002,l10n_jo.jordanian_chart_template,Indivisual Paybles,Payable,1
+jo_account_211003,211003,l10n_jo.jordanian_chart_template,Employees Paybles,Payable,1
+jo_account_212001,212001,l10n_jo.jordanian_chart_template,post dated Issued Checks,Equity,0
+jo_account_213101,213101,l10n_jo.jordanian_chart_template,Income Tax Accured,Payable,1
+jo_account_213201,213201,l10n_jo.jordanian_chart_template,Sales Tax Accured,Payable,1
+jo_account_214001,214001,l10n_jo.jordanian_chart_template,Accrud Expense,Current Liabilities,1
+jo_account_221002,221002,l10n_jo.jordanian_chart_template,Owners Profits 2,Equity,0
+jo_account_222002,222002,l10n_jo.jordanian_chart_template,Profits and Losses Previous years,Equity,0
+jo_account_232001,232001,l10n_jo.jordanian_chart_template,Salary and Allowance,Current Liabilities,0
+jo_account_232002,232002,l10n_jo.jordanian_chart_template,Payroll Taxes,Current Liabilities,0
+jo_account_232003,232003,l10n_jo.jordanian_chart_template,Stock Staff,Current Liabilities,0
+jo_account_232004,232004,l10n_jo.jordanian_chart_template,Sales taxes Due,Current Liabilities,1
+jo_account_232005,232005,l10n_jo.jordanian_chart_template,Purchase taxes Due,Current Liabilities,1
+jo_account_232006,232006,l10n_jo.jordanian_chart_template,Bills Due,Current Liabilities,0
+jo_account_232007,232007,l10n_jo.jordanian_chart_template,Rents Due,Current Liabilities,0
+jo_account_233001,233001,l10n_jo.jordanian_chart_template,Customer Deposits,Current Liabilities,0
+jo_account_233002,233002,l10n_jo.jordanian_chart_template,Customer Insurance,Current Liabilities,0
+jo_account_233003,233003,l10n_jo.jordanian_chart_template,Advance Rental Income ,Current Liabilities,0
+jo_account_234001,234001,l10n_jo.jordanian_chart_template,Falling Inventory Prices,Current Liabilities,0
+jo_account_234002,234002,l10n_jo.jordanian_chart_template,Provision Doubtful Debts,Current Liabilities,0
+jo_account_310001,310001,l10n_jo.jordanian_chart_template,Capital,Equity,0
+jo_account_320001,320001,l10n_jo.jordanian_chart_template,Partners Current,Equity,0
+jo_account_330001,330001,l10n_jo.jordanian_chart_template,Profits and Losses,Equity,0
+jo_account_340001,340001,l10n_jo.jordanian_chart_template,Retaind Earnings,Equity,0
+jo_account_410001,410001,l10n_jo.jordanian_chart_template,sales,Income,0
+jo_account_410002,410002,l10n_jo.jordanian_chart_template,commercial Discount,Income,0
+jo_account_420001,420001,l10n_jo.jordanian_chart_template,Other Income,Income,0
+jo_account_420002,420002,l10n_jo.jordanian_chart_template,Capital Income,Income,0
+jo_account_420003,420003,l10n_jo.jordanian_chart_template,Penalties and absence of workers,Income,0
+jo_account_420004,420004,l10n_jo.jordanian_chart_template,Sales revenue of assets,Income,0
+jo_account_511001,511001,l10n_jo.jordanian_chart_template,Local purchase,Cost of Revenue,0
+jo_account_512001,512001,l10n_jo.jordanian_chart_template,International purchase,Cost of Revenue,0
+jo_account_520001,520001,l10n_jo.jordanian_chart_template,Sales Returen,Cost of Revenue,0
+jo_account_530001,530001,l10n_jo.jordanian_chart_template,purchase Expenses,Cost of Revenue,0
+jo_account_540001,540001,l10n_jo.jordanian_chart_template,purchase Expenses,Cost of Revenue,0
+jo_account_611001,611001,l10n_jo.jordanian_chart_template,Salaries Expenses ,Expenses,0
+jo_account_611002,611002,l10n_jo.jordanian_chart_template,Rent Expenses,Expenses,0
+jo_account_611003,611003,l10n_jo.jordanian_chart_template,Utilites Water and Electcity,Expenses,0
+jo_account_611004,611004,l10n_jo.jordanian_chart_template,Print and Stationary,Expenses,0
+jo_account_611005,611005,l10n_jo.jordanian_chart_template,Bank Service Charge,Expenses,0
+jo_account_611006,611006,l10n_jo.jordanian_chart_template,Hospitality,Expenses,0
+jo_account_611007,611007,l10n_jo.jordanian_chart_template,Marketing ads Expense,Expenses,0
+jo_account_611008,611008,l10n_jo.jordanian_chart_template,Government Fees and charges,Expenses,0
+jo_account_611009,611009,l10n_jo.jordanian_chart_template,Maintenance services expenses,Expenses,0
+jo_account_611010,611010,l10n_jo.jordanian_chart_template,Discounts,Expenses,0
+jo_account_611011,611011,l10n_jo.jordanian_chart_template,Bad Debts  ,Expenses,0
+jo_account_611012,611012,l10n_jo.jordanian_chart_template,Fuel And Oil store,Expenses,0
+jo_account_611013,611013,l10n_jo.jordanian_chart_template,Fixed Assets Depcriation Expense,Expenses,0
+jo_account_611014,611014,l10n_jo.jordanian_chart_template,Shipping delivery Costs,Expenses,0
+jo_account_611015,611015,l10n_jo.jordanian_chart_template,Cutomes & Other,Expenses,0
+jo_account_611016,611016,l10n_jo.jordanian_chart_template,Telephone and Internet expenses,Expenses,0
+jo_account_611017,611017,l10n_jo.jordanian_chart_template,Sales Commision,Expenses,0
+jo_account_611018,611018,l10n_jo.jordanian_chart_template,Purchases Discounts,Expenses,0
+jo_account_611019,611019,l10n_jo.jordanian_chart_template,Depreciation of buildings and constructions,Expenses,0
+jo_account_611020,611020,l10n_jo.jordanian_chart_template,Depreciation Estblishment Costs,Expenses,0
+jo_account_611021,611021,l10n_jo.jordanian_chart_template,Depreciation Furnitures and Equipments,Expenses,0
+jo_account_611022,611022,l10n_jo.jordanian_chart_template,Depreciation Computers Devices  &Softwares,Expenses,0
+jo_account_611023,611023,l10n_jo.jordanian_chart_template,Depreciation Cars & Vehicals,Expenses,0
+jo_account_611024,611024,l10n_jo.jordanian_chart_template,Depreciation Decorations &interiors,Expenses,0
+jo_account_611025,611025,l10n_jo.jordanian_chart_template,Residues and damaged stock of finished materials,Expenses,0
+jo_account_611026,611026,l10n_jo.jordanian_chart_template,Zakat Charity donations ,Expenses,0

@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <record id="res_currency_form_inherit" model="ir.ui.view">
+                <field name="name">Res Currency Form Inherit</field>
+                <field name="model">res.currency</field>
+                <field name="inherit_id" ref="base.view_currency_form"/>
+                <field name="arch" type="xml">
+                <xpath expr="//group" position="after">
+                            <group string="Foreign Currency">
+                                <group>
+                                    <field name="secondary_currency" domain="[('id','!=',id)]"/>
+                                    <field name="base_sale_price"/>
+                                <field name="base_buy_price"/>
+                                </group>
+                                <group>
+                                    <field name="sale_price"/>
+                                    <field name="buy_price"/>
+                                    <field name="tolerance"/>
+                                    <field name="evaluation"/>
+                                </group>
+                             </group>
+                </xpath>
+                </field>
+        </record>
+        <record id="res_currency_tree_inherit" model="ir.ui.view">
+        <field name="name">Res Currency Tree Inherit</field>
+        <field name="model">res.currency</field>
+        <field name="inherit_id" ref="base.view_currency_tree"/>
+        <field name="arch" type="xml">
+            <field name="full_name" position="after">
+                <field name="secondary_currency"/>
+                                <field name="sale_price" optional="hide"/>
+                                <field name="buy_price" optional="hide"/>
+                                <field name="base_sale_price" optional="hide"/>
+                                <field name="base_buy_price" optional="hide"/>
+                                <field name="tolerance" optional="hide"/>
+                                <field name="evaluation" optional="hide"/>
+            </field>
+        </field>
+    </record>
+    </data>
+</odoo>

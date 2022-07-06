@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Account Tax Group -->
+
+        <record id="jo_tax_vat" model="account.tax.group">
+            <field name="name">Zero Taxes</field>
+            <field name="country_id" ref="base.jo"/>
+        </record>
+
+         <record id="jo_tax_group_other" model="account.tax.group">
+            <field name="name">Other Taxes</field>
+            <field name="country_id" ref="base.jo"/>
+        </record>
+
+        <record id="tax_report_vat_return" model="account.tax.report">
+        <field name="name">1. VAT Return</field>
+        <field name="country_id" ref="base.jo"/>
+    </record>
+
+        <record id="tax_report_vat_return_sale_base" model="account.tax.report.line">
+        <field name="name">VAT on Sales and all other Outputs (Base)</field>
+        <field name="report_id" ref="tax_report_vat_return"/>
+        <field name="sequence" eval="1"/>
+    </record>
+
+
+    <record id="tax_report_vat_return_expense_base" model="account.tax.report.line">
+        <field name="name">VAT on Expenses and all other Inputs (Base)</field>
+        <field name="report_id" ref="tax_report_vat_return"/>
+        <field name="sequence" eval="3"/>
+    </record>
+
+    <record id="tax_report_vat_return_sale_tax" model="account.tax.report.line">
+        <field name="name">VAT on Sales and all other Outputs (Tax)</field>
+        <field name="report_id" ref="tax_report_vat_return"/>
+        <field name="sequence" eval="2"/>
+    </record>
+
+           <record id="tax_report_vat_return_sale_base_zero" model="account.tax.report.line">
+        <field name="name">2. Zero Rated (Base)</field>
+        <field name="tag_name">2. Zero Rated (Base)</field>
+        <field name="code">ZERO_SALE_B</field>
+        <field name="parent_id" ref="tax_report_vat_return_sale_base"/>
+        <field name="report_id" ref="tax_report_vat_return"/>
+        <field name="sequence" eval="2"/>
+    </record>
+
+         <record id="tax_report_vat_return_sale_tax_zero" model="account.tax.report.line">
+        <field name="name">2. Zero Rated (Tax)</field>
+        <field name="tag_name">2. Zero Rated (Tax)</field>
+        <field name="code">ZERO_SALE_T</field>
+        <field name="parent_id" ref="tax_report_vat_return_sale_tax"/>
+        <field name="report_id" ref="tax_report_vat_return"/>
+        <field name="sequence" eval="2"/>
+    </record>
+
+         <record id="tax_report_vat_return_expense_base_zero" model="account.tax.report.line">
+        <field name="name">6. Zero Rated (Base)</field>
+        <field name="tag_name">6. Zero Rated (Base)</field>
+        <field name="code">ZERO_PUR_B</field>
+        <field name="parent_id" ref="tax_report_vat_return_expense_base"/>
+        <field name="report_id" ref="tax_report_vat_return"/>
+        <field name="sequence" eval="2"/>
+    </record>
+
+    <record id="tax_report_vat_return_sale_base_exempt" model="account.tax.report.line">
+        <field name="name">3. Exempt Sales (Base)</field>
+        <field name="tag_name">3. Exempt Sales (Base)</field>
+        <field name="code">EXM_SALE_B</field>
+        <field name="parent_id" ref="tax_report_vat_return_sale_base"/>
+        <field name="report_id" ref="tax_report_vat_return"/>
+        <field name="sequence" eval="3"/>
+    </record>
+
+
+    <record id="tax_report_vat_return_sale_tax_exempt" model="account.tax.report.line">
+        <field name="name">3. Exempt Sales (Tax)</field>
+        <field name="tag_name">3. Exempt Sales (Tax)</field>
+        <field name="code">EXM_SALE_T</field>
+        <field name="parent_id" ref="tax_report_vat_return_sale_tax"/>
+        <field name="report_id" ref="tax_report_vat_return"/>
+        <field name="sequence" eval="3"/>
+    </record>
+
+
+    <record id="tax_report_vat_return_expense_tax" model="account.tax.report.line">
+        <field name="name">VAT on Expenses and all other Inputs (Tax)</field>
+        <field name="report_id" ref="tax_report_vat_return"/>
+        <field name="sequence" eval="4"/>
+    </record>
+     <record id="tax_report_vat_return_expense_base_exempt" model="account.tax.report.line">
+        <field name="name">7. Exempt Expenses (Base)</field>
+        <field name="tag_name">7. Exempt Expenses (Base)</field>
+        <field name="code">EXM_PUR_B</field>
+        <field name="parent_id" ref="tax_report_vat_return_expense_base"/>
+        <field name="report_id" ref="tax_report_vat_return"/>
+        <field name="sequence" eval="3"/>
+    </record>
+
+    <record id="tax_report_vat_return_expense_tax_exempt" model="account.tax.report.line">
+        <field name="name">7. Exempt Expenses (Tax)</field>
+        <field name="tag_name">7. Exempt Expenses (Tax)</field>
+        <field name="code">EXM_PUR_T</field>
+        <field name="parent_id" ref="tax_report_vat_return_expense_tax"/>
+        <field name="report_id" ref="tax_report_vat_return"/>
+        <field name="sequence" eval="3"/>
+    </record>
+     </data>
+</odoo>

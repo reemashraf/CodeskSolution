@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="product_category_form_inherit" model="ir.ui.view">
+                <field name="name">Product Category Form Inherit</field>
+                <field name="model">product.category</field>
+                <field name="inherit_id" ref="product.product_category_form_view"/>
+                <field name="arch" type="xml">
+                <xpath expr="//group[@name='first']" position="after">
+                            <group string="Bonus Rules">
+                                <field name="has_bonus"/>
+                            </group>
+                </xpath>
+                </field>
+        </record>
+    </data>
+</odoo>

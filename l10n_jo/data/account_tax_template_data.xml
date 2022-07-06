@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="jo_standard_sale_0" model="account.tax.template">
+        <field name="name">Zero Rated 0%</field>
+        <field name="type_tax_use">sale</field>
+        <field name="amount">0</field>
+        <field name="amount_type">percent</field>
+        <field name="description">Zero Rated 0%</field>
+        <field name="tax_group_id" ref="jo_tax_vat"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_base_zero')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': False,
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_tax_zero')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_base_zero')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id':False,
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_tax_zero')],
+            }),
+        ]"/>
+    </record>
+
+    <record id="jo_standard_purchase_0" model="account.tax.template">
+        <field name="name">Zero Rated 0%</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="amount">0</field>
+        <field name="amount_type">percent</field>
+        <field name="description">Zero Rated 0%</field>
+        <field name="tax_group_id" ref="jo_tax_vat"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_base_zero')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': False,
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_tax_zero')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_base_zero')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': False,
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_tax_zero')],
+            }),
+        ]"/>
+    </record>
+
+
+    <record id="eg_exempt_sale_2" model="account.tax.template">
+        <field name="name">Two Exempt %</field>
+        <field name="type_tax_use">sale</field>
+        <field name="amount">2</field>
+        <field name="amount_type">percent</field>
+        <field name="description">2% Exempt</field>
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id':ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+
+    <record id="jo_exempt_purchase_2" model="account.tax.template">
+        <field name="name">Two Exempt %</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="amount">2</field>
+        <field name="amount_type">percent</field>
+        <field name="description">2% Exempt</field>
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id':ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+       <record id="eg_exempt_sale_4" model="account.tax.template">
+        <field name="name">Four Exempt %</field>
+        <field name="type_tax_use">sale</field>
+        <field name="amount">4</field>
+        <field name="amount_type">percent</field>
+        <field name="description">4% Exempt</field>
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id':ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+
+    <record id="jo_exempt_purchase_4" model="account.tax.template">
+        <field name="name">Four Exempt %</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="amount">4</field>
+        <field name="amount_type">percent</field>
+        <field name="description">4% Exempt</field>
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id':ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+       <record id="eg_exempt_sale_5" model="account.tax.template">
+        <field name="name">Five Exempt %</field>
+        <field name="type_tax_use">sale</field>
+        <field name="amount">5</field>
+        <field name="amount_type">percent</field>
+        <field name="description">5% Exempt</field>
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+
+    <record id="jo_exempt_purchase_5" model="account.tax.template">
+        <field name="name">Five Exempt %</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="amount">5</field>
+        <field name="amount_type">percent</field>
+        <field name="description">5% Exempt</field>
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+       <record id="eg_exempt_sale_10" model="account.tax.template">
+        <field name="name">Ten Exempt %</field>
+        <field name="type_tax_use">sale</field>
+        <field name="amount">10</field>
+        <field name="amount_type">percent</field>
+        <field name="description">10% Exempt</field>
+
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+
+    <record id="jo_exempt_purchase_10" model="account.tax.template">
+        <field name="name">Ten Exempt %</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="amount">10</field>
+        <field name="amount_type">percent</field>
+        <field name="description">10% Exempt</field>
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id':ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+       <record id="eg_exempt_sale_11" model="account.tax.template">
+        <field name="name">Elven Exempt %</field>
+        <field name="type_tax_use">sale</field>
+        <field name="amount">11</field>
+        <field name="amount_type">percent</field>
+        <field name="description">11% Exempt</field>
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+
+    <record id="jo_exempt_purchase_11" model="account.tax.template">
+        <field name="name">Elven Exempt %</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="amount">11</field>
+        <field name="amount_type">percent</field>
+        <field name="description">11% Exempt</field>
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+    <record id="eg_exempt_sale_16" model="account.tax.template">
+        <field name="name">Sixten Exempt %</field>
+        <field name="type_tax_use">sale</field>
+        <field name="amount">16</field>
+        <field name="amount_type">percent</field>
+        <field name="description">16% Exempt</field>
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_sale_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+
+    <record id="jo_exempt_purchase_16" model="account.tax.template">
+        <field name="name">Sixten Exempt %</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="amount">16</field>
+        <field name="amount_type">percent</field>
+        <field name="description">16% Exempt</field>
+<!--        <field name="l10n_jo_eta_code">t1_v003</field>-->
+        <field name="tax_group_id" ref="jo_tax_group_other"/>
+        <field name="chart_template_id" ref="jordanian_chart_template"/>
+        <field name="invoice_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'plus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[Command.clear(),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'base',
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_base_exempt')],
+            }),
+            Command.create({
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('jo_account_117001'),
+                'minus_report_line_ids': [ref('tax_report_vat_return_expense_tax_exempt')],
+            }),
+        ]"/>
+    </record>
+
+</odoo>
